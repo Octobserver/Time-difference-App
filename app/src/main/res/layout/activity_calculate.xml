@@ -7,48 +7,193 @@
     tools:context=".Calculate">
 
     <TextView
-        android:id="@+id/start"
-        android:layout_width="60dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/start"
+        android:id="@+id/end"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/end"
         android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/endHr"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/startHr"
-        android:layout_width="116dp"
-        android:layout_height="33dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/hint"
         android:inputType="number"
         android:textAlignment="center"
+        android:textSize="34sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/start"
+        app:layout_constraintEnd_toStartOf="@+id/colon"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/start" />
 
-    <TextView
-        android:id="@+id/colon"
-        android:layout_width="10dp"
-        android:layout_height="33dp"
+    <EditText
+        android:id="@+id/endHr"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
         android:layout_marginStart="16dp"
-        android:text="@string/colon"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/hint"
+        android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@+id/startHr"
-        app:layout_constraintStart_toEndOf="@+id/startHr" />
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/end"
+        app:layout_constraintEnd_toStartOf="@+id/colon2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/end" />
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/start"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/startHr"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/startMin"
-        android:layout_width="94dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="72dp"
         android:ems="10"
         android:hint="@string/hint"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@+id/startHr"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/colon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/colon" />
+
+    <TextView
+        android:id="@+id/colon"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/colon"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/startHr"
+        app:layout_constraintEnd_toStartOf="@+id/startMin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/startHr" />
+
+    <TextView
+        android:id="@+id/colon2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/colon"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/endHr"
+        app:layout_constraintEnd_toStartOf="@+id/endMin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/endHr" />
+
+    <EditText
+        android:id="@+id/endMin"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="72dp"
+        android:ems="10"
+        android:hint="@string/hint"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/colon2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colon2" />
+
+    <ImageButton
+        android:id="@+id/calcDiff"
+        android:layout_width="96dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="47dp"
+        android:contentDescription="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endHr"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+    <TextView
+        android:id="@+id/diff"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/diff"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/diffHr"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/diffHr"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/defaultStr"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/diff"
+        app:layout_constraintEnd_toStartOf="@+id/colon3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/diff" />
+
+    <TextView
+        android:id="@+id/colon3"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/colon"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/diffHr"
+        app:layout_constraintEnd_toStartOf="@+id/diffMin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/diffHr" />
+
+    <TextView
+        android:id="@+id/diffMin"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/defaultStr"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/colon3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colon3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

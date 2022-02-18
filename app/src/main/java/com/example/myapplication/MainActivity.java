@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             //Make a new intent and start a new calculate activity
             Log.d("Calculate", "onClick: 1");
+            Intent intent = new Intent(MainActivity.this, Calculate.class);
+            startActivity(intent);
         }
     };
     private final View.OnClickListener goToLearn =  new View.OnClickListener() {
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         //Set default preference
         mode = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor peditor = mode.edit();
-        peditor.putString("ClockMode", "military");
+        peditor.putString("ClockMode", "24");
         peditor.apply();
 
         //Handle onClick of buttons
@@ -78,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onPause() {
- /*       SharedPreferences.Editor peditor = mode.edit();
+ /*     SharedPreferences.Editor peditor = mode.edit();
         peditor.putString("ClockMode", "military");
         peditor.apply();*/
         super.onPause();

@@ -8,5 +8,8 @@
     <string name="start">start</string>
     <string name="end">end</string>
     <string name="hint">00</string>
+    <string name="defaultStr">00</string>
     <string name="colon">:</string>
+    <string name="diff">diff</string>
+    <string name="icon">hourglass</string>
 </resources>
