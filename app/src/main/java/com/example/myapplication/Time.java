@@ -9,9 +9,9 @@ public class Time {
     // Checkstyle requires us to declare them before the instance data.
 
     /** Format integer with 4 digits of precision. */
-    private static DecimalFormat four0s = new DecimalFormat("0000");
+    private static final DecimalFormat four0s = new DecimalFormat("0000");
     /** Format integer with 2 digits of precision. */
-    private static DecimalFormat two0s = new DecimalFormat("00");
+    private static final DecimalFormat two0s = new DecimalFormat("00");
 
     // These are handy constants.
 
@@ -78,9 +78,19 @@ public class Time {
         this.mins = mns;
     }
 
+    public int getHours() {
+        return this.hours;
+    }
+
+    public int getMins() {
+        return this.mins;
+    }
+
+
     /** Get a string representation, in standard format.
      @return the string, such as "2:45pm"
      */
+    @Override
     public String toString() {
         String tstr = "";
         char when = 'a';
@@ -101,9 +111,9 @@ public class Time {
     }
 
     /** Get a military string representation.
-     @return the string, such as "0405"
+     @return the string, such as "04:05"
      */
     public String military() {
-        return four0s.format(this.hours * DIVISOR + this.mins);
+        return two0s.format(this.hours) + ":" + two0s.format(this.mins);
     }
 }

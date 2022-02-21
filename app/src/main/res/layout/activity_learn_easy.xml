@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfd8fa">
+
+    <TextView
+        android:id="@+id/endHour"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/defaultStr2"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/startHour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/startHour" />
+
+    <TextView
+        android:id="@+id/startHour"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/defaultStr2"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/endHour"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/b1Result"
+        android:layout_width="96dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="84dp"
+        android:background="#dfd8fa"
+        android:paddingLeft="10dp"
+        android:paddingTop="40dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="40dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/b2Result"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startLearn"
+        app:srcCompat="@drawable/hourglass2" />
+
+    <ImageButton
+        android:id="@+id/b2Result"
+        android:layout_width="96dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="84dp"
+        android:background="#dfd8fa"
+        android:paddingLeft="10dp"
+        android:paddingTop="25dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="25dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/b3Result"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b1Result"
+        app:layout_constraintTop_toBottomOf="@+id/startLearn"
+        app:srcCompat="@drawable/hourglass2" />
+
+    <TextView
+        android:id="@+id/startLearn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/start"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/endLearn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startHour" />
+
+    <TextView
+        android:id="@+id/endLearn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/end"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/startLearn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/startLearn" />
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:paddingLeft="32dp"
+        android:paddingTop="8dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="8dp"
+        android:text="@string/check"
+        android:textSize="34sp"
+        app:backgroundTint="#FFFFFF"
+        app:iconPadding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b2Result" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="40dp"
+        android:layout_height="15dp"
+        android:background="#656565"
+        app:layout_constraintBaseline_toBaselineOf="@+id/startHour"
+        app:layout_constraintEnd_toStartOf="@+id/endHour"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toEndOf="@+id/startHour" />
+
+    <ImageButton
+        android:id="@+id/b3Result"
+        android:layout_width="96dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="32dp"
+        android:background="#dfd8fa"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b2Result"
+        app:layout_constraintTop_toBottomOf="@+id/endLearn"
+        app:srcCompat="@drawable/hourglass2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
