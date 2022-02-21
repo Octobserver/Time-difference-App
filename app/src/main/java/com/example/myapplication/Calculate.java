@@ -1,32 +1,37 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class Calculate extends AppCompatActivity {
 
-    Integer stHr;
-    Integer stMn;
-    Integer edHr;
-    Integer edMn;
+    private Integer stHr = 0;
+    private Integer stMn = 0;
+    private Integer edHr = 0;
+    private Integer edMn = 0;
+    private static final DecimalFormat two0s = new DecimalFormat("00");
     private final View.OnClickListener calculateDiff =  new View.OnClickListener() {
         public void onClick(View v) {
             //Make a new intent and start a new calculate activity
             Log.d("CalculateDiff", "onClick: 1");
-            stHr = Integer.parseInt(((EditText) findViewById(R.id.startHr)).getText().toString());
-            stMn = Integer.parseInt(((EditText) findViewById(R.id.startMin)).getText().toString());
-            edHr = Integer.parseInt(((EditText) findViewById(R.id.endHr)).getText().toString());
-            edMn = Integer.parseInt(((EditText) findViewById(R.id.endMin)).getText().toString());
+            try {
+                stHr = Integer.parseInt(((EditText) findViewById(R.id.startHr)).getText().toString());
+                stMn = Integer.parseInt(((EditText) findViewById(R.id.startMin)).getText().toString());
+                edHr = Integer.parseInt(((EditText) findViewById(R.id.endHr)).getText().toString());
+                edMn = Integer.parseInt(((EditText) findViewById(R.id.endMin)).getText().toString());
+            } catch (NumberFormatException nfe) {
+                Log.d("CalculateDiff", "handle default");
+            }
+
             Log.d("stHr", stHr.toString());
             Log.d("stMin", stMn.toString());
             Log.d("edHr", edHr.toString());
@@ -49,8 +54,8 @@ public class Calculate extends AppCompatActivity {
                     mnDiff = edMn - stMn;
                 }
 
-                ((TextView) findViewById(R.id.diffHr)).setText(Integer.toString(hrDiff));
-                ((TextView) findViewById(R.id.diffMin)).setText(Integer.toString(mnDiff));
+                ((TextView) findViewById(R.id.diffHr)).setText(two0s.format(hrDiff));
+                ((TextView) findViewById(R.id.diffMin)).setText(two0s.format(mnDiff));
             }
 
         }
@@ -98,10 +103,7 @@ public class Calculate extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculate);
         setTitle("Calculate");
-        stHr = 0;
-        stMn = 0;
-        edHr = 0;
-        edMn = 0;
+
         ImageButton button = findViewById(R.id.calcDiff);
         button.setOnClickListener(calculateDiff);
     }

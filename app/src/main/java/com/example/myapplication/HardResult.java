@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class HardResult extends AppCompatActivity {
 
     private Bundle extras;
+    private static final DecimalFormat two0s = new DecimalFormat("00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +23,8 @@ public class HardResult extends AppCompatActivity {
        ((TextView) findViewById(R.id.startHour)).setText(extras.getString("startTime"));
        ((TextView) findViewById(R.id.endHour)).setText(extras.getString("endTime"));
 
-       ((TextView) findViewById(R.id.hardResultHr)).setText(Integer.toString(extras.getInt("diffHr")));
-       ((TextView) findViewById(R.id.hardResultMin)).setText(Integer.toString(extras.getInt("diffMin")));
+       ((TextView) findViewById(R.id.hardResultHr)).setText(two0s.format(extras.getInt("diffHr")));
+       ((TextView) findViewById(R.id.hardResultMin)).setText(two0s.format(extras.getInt("diffMin")));
 
        if (extras.getInt("diffHrUser") != extras.getInt("diffHr") ||
                extras.getInt("diffMnUser") != extras.getInt("diffMin")) {

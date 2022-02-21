@@ -5,8 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable/bacck.xml" value="0.1575" />
         <entry key="app/src/main/res/drawable/imagebuttonbg.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_calculate.xml" value="0.311083984375" />
-        <entry key="app/src/main/res/layout/activity_easy_result.xml" value="0.5818206787109377" />
+        <entry key="app/src/main/res/drawable/imagebuttonbg2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_calculate.xml" value="0.3462646484375" />
+        <entry key="app/src/main/res/layout/activity_easy_result.xml" value="0.2058273315429689" />
         <entry key="app/src/main/res/layout/activity_hard_result.xml" value="0.10000000000000003" />
         <entry key="app/src/main/res/layout/activity_learn_easy.xml" value="0.21873474121093756" />
         <entry key="app/src/main/res/layout/activity_learn_hard.xml" value="0.23941345214843748" />

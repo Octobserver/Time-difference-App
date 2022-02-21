@@ -15,8 +15,8 @@ import java.util.Random;
 
 public class LearnHard extends AppCompatActivity {
 
-    private int diffHrUser;
-    private int diffMnUser;
+    private int diffHrUser = 0;
+    private int diffMnUser = 0;
     private Bundle extras;
 
     @Override
@@ -38,8 +38,12 @@ public class LearnHard extends AppCompatActivity {
         public void onClick(View v) {
 
             Log.d("Check_LearnHard", "onClick: 1");
-            diffHrUser = Integer.parseInt(((TextView)findViewById(R.id.hrInputHard)).getText().toString());
-            diffMnUser = Integer.parseInt(((TextView)findViewById(R.id.mnInputHard)).getText().toString());
+            try {
+                diffHrUser = Integer.parseInt(((TextView)findViewById(R.id.hrInputHard)).getText().toString());
+                diffMnUser = Integer.parseInt(((TextView)findViewById(R.id.mnInputHard)).getText().toString());
+            } catch (NumberFormatException nfe) {
+                Log.d("Check_LearnHard", "handle default");
+            }
 
             extras.putInt("diffHrUser", diffHrUser);
             extras.putInt("diffMnUser", diffMnUser);

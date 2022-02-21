@@ -1,18 +1,18 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class EasyResult extends AppCompatActivity {
 
     private Bundle extras;
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +25,10 @@ public class EasyResult extends AppCompatActivity {
         ((TextView) findViewById(R.id.endHour)).setText(extras.getString("endTime"));
 
         if (extras.getInt("correctID") == extras.getInt("chosenID")) {
-            findViewById(extras.getInt("chosenID")).setBackgroundColor(3);
+            findViewById(extras.getInt("chosenID")).setBackground(getResources().getDrawable(R.drawable.imagebuttonbg));
         } else {
-            findViewById(extras.getInt("correctID")).setBackgroundColor(2);
-            findViewById(extras.getInt("chosenID")).setBackgroundColor(3);
+            findViewById(extras.getInt("correctID")).setBackground(getResources().getDrawable(R.drawable.imagebuttonbg));
+            findViewById(extras.getInt("chosenID")).setBackground(getResources().getDrawable(R.drawable.imagebuttonbg2));
         }
 
         findViewById(R.id.retry).setOnClickListener(retry);
