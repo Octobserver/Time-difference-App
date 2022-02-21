@@ -37,8 +37,9 @@ public class EasyResult extends AppCompatActivity {
 
     private final View.OnClickListener retry =  new View.OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent(EasyResult.this, LearnEasy.class);
-            startActivity(intent);
+            //Intent intent = new Intent(EasyResult.this, LearnEasy.class);
+            //startActivity(intent);
+            finish();
         }
     };
 

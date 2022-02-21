@@ -104,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:text="@string/hr"
         android:textAlignment="center"
@@ -118,23 +118,17 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/min"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/mnInputHard"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/mnInputHard"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="128dp"
         android:background="@drawable/border"
         android:ems="10"
         android:hint="@string/hint"
@@ -142,9 +136,7 @@
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/hrInputHard" />
 
     <TextView
         android:id="@+id/textView2"

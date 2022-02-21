@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="#dfd8fa">
 
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/contentDescription1"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/b1Result"
+        app:layout_constraintTop_toBottomOf="@+id/b1Result" />
+
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
@@ -52,11 +63,12 @@
 
     <ImageButton
         android:id="@+id/b1Result"
-        android:layout_width="96dp"
+        android:layout_width="104dp"
         android:layout_height="160dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="60dp"
         android:background="#dfd8fa"
+        android:contentDescription="@string/contentDescription1"
         android:paddingLeft="10dp"
         android:paddingTop="40dp"
         android:paddingRight="10dp"
@@ -70,10 +82,11 @@
 
     <ImageButton
         android:id="@+id/b2Result"
-        android:layout_width="96dp"
+        android:layout_width="104dp"
         android:layout_height="160dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="60dp"
         android:background="#dfd8fa"
+        android:contentDescription="@string/contentDescription2"
         android:paddingLeft="10dp"
         android:paddingTop="25dp"
         android:paddingRight="10dp"
@@ -119,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="16dp"
         android:text="@string/retry"
         android:textSize="34sp"
@@ -132,11 +145,12 @@
 
     <ImageButton
         android:id="@+id/b3Result"
-        android:layout_width="96dp"
+        android:layout_width="104dp"
         android:layout_height="160dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:background="#dfd8fa"
+        android:contentDescription="@string/contentDescription3"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -157,5 +171,25 @@
         app:layout_constraintEnd_toStartOf="@+id/endHour"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toEndOf="@+id/startHour" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:text="@string/contentDescription2"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/b2Result" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:text="@string/contentDescription3"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/b3Result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
