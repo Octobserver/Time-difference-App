@@ -125,14 +125,18 @@ public class LearnEasy extends AppCompatActivity {
 
    @Override
     protected void onPause() {
-        (findViewById(chosenId)).setBackgroundColor(getResources().getColor(R.color.pale_mauve));
+        if (chosenId != -1) {
+            (findViewById(chosenId)).setBackgroundColor(getResources().getColor(R.color.pale_mauve));
+        }
         super.onPause();
 
     }
 
     @Override
     protected void onResume() {
-        (findViewById(chosenId)).setBackground(getResources().getDrawable(R.drawable.border));
+        if (chosenId != -1) {
+            (findViewById(chosenId)).setBackground(getResources().getDrawable(R.drawable.border));
+        }
         super.onResume();
 
     }
