@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.DecimalFormat;
 import java.util.Random;
 
 public class LearnEasy extends AppCompatActivity {
@@ -25,8 +24,8 @@ public class LearnEasy extends AppCompatActivity {
 
     private int corrId;
     private int chosenId;
-    private Random randHr = new Random();
-    private Random randMn = new Random();
+    private final Random randHr = new Random();
+    private final Random randMn = new Random();
 
     private final View.OnClickListener setDiff = new View.OnClickListener() {
         @SuppressLint("UseCompatLoadingForDrawables")
@@ -36,7 +35,7 @@ public class LearnEasy extends AppCompatActivity {
                 (findViewById(chosenId)).setBackgroundColor(getResources().getColor(R.color.pale_mauve));
             }
             chosenId = v.getId();
-            v.setBackground(getResources().getDrawable(R.drawable.border));
+            v.setBackground(getResources().getDrawable(R.mipmap.border));
             Log.d("Correct id", (Integer.valueOf(corrId)).toString());
             Log.d("Chosen id", (Integer.valueOf(chosenId)).toString());
         }
@@ -132,10 +131,11 @@ public class LearnEasy extends AppCompatActivity {
 
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onResume() {
         if (chosenId != -1) {
-            (findViewById(chosenId)).setBackground(getResources().getDrawable(R.drawable.border));
+            (findViewById(chosenId)).setBackground(getResources().getDrawable(R.mipmap.border));
         }
         super.onResume();
 

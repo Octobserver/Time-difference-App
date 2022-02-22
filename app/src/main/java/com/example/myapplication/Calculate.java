@@ -14,11 +14,15 @@ import java.text.DecimalFormat;
 
 public class Calculate extends AppCompatActivity {
 
-    private Integer stHr = 0;
+    //Start time and end time represented by integers
+    private Integer stHr = 8;
     private Integer stMn = 0;
-    private Integer edHr = 0;
+    private Integer edHr = 20;
     private Integer edMn = 0;
+
+    //Format for displaying time
     private static final DecimalFormat two0s = new DecimalFormat("00");
+
     private final View.OnClickListener calculateDiff =  new View.OnClickListener() {
         public void onClick(View v) {
             //Make a new intent and start a new calculate activity
@@ -31,11 +35,6 @@ public class Calculate extends AppCompatActivity {
             } catch (NumberFormatException nfe) {
                 Log.d("CalculateDiff", "handle default");
             }
-
-            Log.d("stHr", stHr.toString());
-            Log.d("stMin", stMn.toString());
-            Log.d("edHr", edHr.toString());
-            Log.d("edMn", edMn.toString());
 
             if (isValid(stHr, stMn, edHr, edMn)) {
                 int hrDiff;
@@ -66,25 +65,25 @@ public class Calculate extends AppCompatActivity {
             if (isValidHr(stHr)) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Invalid Start Hour!", Toast.LENGTH_SHORT);
                 toast.show();
-                ((EditText) findViewById(R.id.startHr)).setText(R.string.hint);
+                ((EditText) findViewById(R.id.startHr)).setText(R.string.defaultStr);
                 v = false;
             }
             if (isValidMin(stMn)) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Invalid Start Minute!", Toast.LENGTH_SHORT);
                 toast.show();
-                ((EditText) findViewById(R.id.startMin)).setText(R.string.hint);
+                ((EditText) findViewById(R.id.startMin)).setText(R.string.defaultStr);
                 v = false;
             }
             if (isValidHr(edHr)) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Invalid End hour!", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(), "Invalid End Hour!", Toast.LENGTH_SHORT);
                 toast.show();
-                ((EditText) findViewById(R.id.endHr)).setText(R.string.hint);
+                ((EditText) findViewById(R.id.endHr)).setText(R.string.defaultStr);
                 v = false;
             }
             if (isValidMin(edMn)) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Invalid End Minute!", Toast.LENGTH_SHORT);
                 toast.show();
-                ((EditText) findViewById(R.id.endMin)).setText(R.string.hint);
+                ((EditText) findViewById(R.id.endMin)).setText(R.string.defaultStr);
                 v = false;
             }
 

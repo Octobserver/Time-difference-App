@@ -13,7 +13,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/contentDescription1"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/b1Result"
         app:layout_constraintTop_toBottomOf="@+id/b1Result" />
 
@@ -34,13 +34,13 @@
 
     <TextView
         android:id="@+id/endHour"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:text="@string/defaultStr2"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="40sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/startHour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,14 +48,14 @@
 
     <TextView
         android:id="@+id/startHour"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="32dp"
         android:text="@string/defaultStr2"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@+id/endHour"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,9 +64,9 @@
     <ImageButton
         android:id="@+id/b1Result"
         android:layout_width="104dp"
-        android:layout_height="160dp"
+        android:layout_height="168dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         android:background="#dfd8fa"
         android:contentDescription="@string/contentDescription1"
         android:paddingLeft="10dp"
@@ -78,13 +78,13 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startLearn"
-        app:srcCompat="@drawable/hourglass2" />
+        app:srcCompat="@mipmap/button_learn_easy" />
 
     <ImageButton
         android:id="@+id/b2Result"
         android:layout_width="104dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="48dp"
         android:background="#dfd8fa"
         android:contentDescription="@string/contentDescription2"
         android:paddingLeft="10dp"
@@ -96,18 +96,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b1Result"
         app:layout_constraintTop_toBottomOf="@+id/startLearn"
-        app:srcCompat="@drawable/hourglass2" />
+        app:srcCompat="@mipmap/button_learn_easy" />
 
     <TextView
         android:id="@+id/startLearn"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="@string/start"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toStartOf="@+id/endLearn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,13 +115,13 @@
 
     <TextView
         android:id="@+id/endLearn"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:text="@string/end"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="40sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/startLearn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -146,8 +146,8 @@
     <ImageButton
         android:id="@+id/b3Result"
         android:layout_width="104dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         android:background="#dfd8fa"
         android:contentDescription="@string/contentDescription3"
@@ -160,17 +160,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/b2Result"
         app:layout_constraintTop_toBottomOf="@+id/endLearn"
-        app:srcCompat="@drawable/hourglass2" />
+        app:srcCompat="@mipmap/button_learn_easy" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="40dp"
+        android:layout_width="50dp"
         android:layout_height="15dp"
+        android:layout_marginTop="104dp"
         android:background="#656565"
-        app:layout_constraintBaseline_toBaselineOf="@+id/startHour"
         app:layout_constraintEnd_toStartOf="@+id/endHour"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toEndOf="@+id/startHour" />
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/startHour"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
@@ -178,7 +179,7 @@
         android:layout_height="wrap_content"
         android:text="@string/contentDescription2"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="@+id/b2Result" />
 
@@ -188,7 +189,7 @@
         android:layout_height="wrap_content"
         android:text="@string/contentDescription3"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="@+id/b3Result" />
 

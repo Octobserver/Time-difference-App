@@ -106,7 +106,7 @@ public class Time {
         else {
             tstr += this.hours;
         }
-        tstr += ":" + two0s.format(this.mins) + when + 'm';
+        tstr += ":" + two0s.format(this.mins) + when;
         return tstr;
     }
 
