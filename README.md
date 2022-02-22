@@ -1,3 +1,6 @@
+Jemin Ryoo jryoo3
+Weina Dai wdai11
+
 # Time Difference App
 
 ## About the App
